@@ -14,6 +14,12 @@
     "marquee_section_qMzM3k": {
       "type": "marquee-section",
       "blocks": {
+        "text_HKkfcC": {
+          "type": "text",
+          "settings": {
+            "new_text": "Welcome to  Shoes"
+          }
+        },
         "text_6kwyBN": {
           "type": "text",
           "settings": {
@@ -40,6 +46,7 @@
         }
       },
       "block_order": [
+        "text_HKkfcC",
         "text_6kwyBN",
         "text_BfQfnp",
         "text_ifz9WY",
@@ -58,6 +65,14 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
+        "announcement_icMjTY": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "text": "Welcome to our store",
+            "link": ""
+          }
+        },
         "announcement_KNiRwV": {
           "type": "announcement",
           "disabled": true,
@@ -82,6 +97,7 @@
         }
       },
       "block_order": [
+        "announcement_icMjTY",
         "announcement_KNiRwV",
         "announcement-bar-0",
         "announcement_EfHMrD"

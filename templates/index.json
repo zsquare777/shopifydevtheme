@@ -54,6 +54,12 @@
     "gm_autoplay_slideshow_QCGybh": {
       "type": "gm-autoplay-slideshow",
       "blocks": {
+        "banner_W8KGRC": {
+          "type": "banner",
+          "settings": {
+            "link": ""
+          }
+        },
         "banner_TREQcU": {
           "type": "banner",
           "settings": {
@@ -70,6 +76,7 @@
         }
       },
       "block_order": [
+        "banner_W8KGRC",
         "banner_TREQcU",
         "banner_ib7mfD"
       ],
@@ -101,7 +108,7 @@
       "settings": {
         "collection": "all",
         "products_to_show": 8,
-        "title": "Featured products",
+        "title": "Featured products test",
         "heading_size": "h2",
         "description": "",
         "show_description": false,
@@ -681,7 +688,7 @@
             "corner_styling": "soft",
             "header_text_color": "#000000",
             "text_color": "#000000",
-            "card_color": "#F9F9F9",
+            "card_color": "#f9f9f9",
             "stars_color": "",
             "arrows_color": "#000000",
             "transition_speed": 5,
