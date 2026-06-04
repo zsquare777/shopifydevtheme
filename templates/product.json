@@ -1,0 +1,161 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "popup_dgdTfp": {
+          "type": "popup",
+          "settings": {
+            "text": "size chart",
+            "page": "size-chart"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "gm_trustbadge_icons_only_bRALqk": {
+          "type": "gm-trustbadge-icons-only",
+          "settings": {
+            "number_of_icons": 4,
+            "trustbadge_icon_1": "shopify://shop_images/Brush-Boosters_3.jpg",
+            "trustbadge_icon_2": "shopify://shop_images/Brush-Boosters_2.jpg"
+          }
+        },
+        "custom_liquid_tbWVxG": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<style>\n  .estimated-delivery-date--container{\n  width: 100%;\n  max-width: 600px;\n  height: auto;\n  margin: 0 auto;\n  display: flex;\n  justify-content: space-between;\n  align-items: flex-start;\n  border: 1px solid;\n  border-radius: 10px;\n  padding-block: 0.7rem;\n  padding-inline: 1rem;\n  background: #E1EACD;\n}\n\n  @media only screen and (min-width: 750px){\n    .estimated-delivery-date--container::after,\n    .estimated-delivery-date--container::before{\n      content: \"\";\n      margin: auto;\n    }\n  }\n\n\n.estimated-delivery-date--content{\n  width: calc(33% - 20px);\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n\n.estimated-delivery-date--content svg {\n  width: 25px;\n  height: 25px;\n  margin-bottom: 5px;\n}\n\n.estimated-delivery-date--content span {\n  font-size: 1em;\n  line-height: 1.2;\n}\n\n@media only screen and (max-width: 749px){\n   .estimated-delivery-date--container {\n     padding-inline: 0.2rem;\n   }\n}\n</style>\n\n<div class=\"estimated-delivery-date--container\">\n  <div class=\"estimated-delivery-date--content\">\n    <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" class=\"bi bi-bag-check-fill\" viewBox=\"0 0 16 16\">\n  <path fill-rule=\"evenodd\" d=\"M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0m-.646 5.354a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0z\"/>\n</svg>\n    <span>Ordered</span>\n    <span>{{ \"now\" | date: \"%d %b\" }}</span>\n  </div>\n  \n  <div class=\"estimated-delivery-date--content\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" class=\"bi bi-airplane-fill\" viewBox=\"0 0 16 16\">\n  <path d=\"M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849\"/>\n</svg>\n    <span>Shipped</span>\n    <span>{{ \"now\" | date: \"%s\" | plus: 86400 | date: \"%d %b\" }}</span>\n  </div>\n  <div class=\"estimated-delivery-date--content\">\n    <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" class=\"bi bi-box2-heart-fill\" viewBox=\"0 0 16 16\">\n  <path d=\"M3.75 0a1 1 0 0 0-.8.4L.1 4.2a.5.5 0 0 0-.1.3V15a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V4.5a.5.5 0 0 0-.1-.3L13.05.4a1 1 0 0 0-.8-.4zM8.5 4h6l.5.667V5H1v-.333L1.5 4h6V1h1zM8 7.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132\"/>\n</svg>\n    <span>Delivered</span>\n    <span>{{ \"now\" | date: \"%s\" | plus: 432000 | date: \"%d %b\" }}</span>\n  </div>\n</div>"
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        },
+        "judge_me_reviews_preview_badge_Ni9irh": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "popup_dgdTfp",
+        "price",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "gm_trustbadge_icons_only_bRALqk",
+        "custom_liquid_tbWVxG",
+        "description",
+        "share",
+        "judge_me_reviews_preview_badge_Ni9irh"
+      ],
+      "custom_css": [
+        ".price--large {font-size: 30px;}"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-1",
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail",
+        "mobile_thumbnails": "columns",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 8,
+        "padding_bottom": 12
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "1779748822c0fbabec": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_7UJgai": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_7UJgai"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "related-products",
+    "1779748822c0fbabec"
+  ]
+}

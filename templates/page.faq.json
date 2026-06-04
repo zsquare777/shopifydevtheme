@@ -1,0 +1,367 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "rich_text_7DPmKP": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_6MAJpt": {
+          "type": "heading",
+          "settings": {
+            "heading": "Freqently Asked Questions",
+            "heading_size": "h1"
+          }
+        },
+        "text_LJDhQb": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+          }
+        },
+        "button_ebihFR": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_6MAJpt",
+        "text_LJDhQb",
+        "button_ebihFR"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "collapsible_content_VwUt7n": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_AGV8ep": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Test",
+            "icon": "nut_free",
+            "row_content": "<p>hello</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_yGry6z": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_wXGr3T": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_6CxcJw": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_mmaJix": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_AGV8ep",
+        "collapsible_row_yGry6z",
+        "collapsible_row_wXGr3T",
+        "collapsible_row_6CxcJw",
+        "collapsible_row_mmaJix"
+      ],
+      "disabled": true,
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "Frequently Asked Question",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "container_color_scheme": "",
+        "color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image": "shopify://shop_images/CuppingSet7.jpg",
+        "image_ratio": "small",
+        "desktop_layout": "image_first",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collapsible_content_pTNYUY": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_iyJMRm": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How long does delivery take?",
+            "icon": "question_mark",
+            "row_content": "<ul><li>Processing time: 1–2 business days</li><li>Delivery time: 3–7 business days</li></ul>",
+            "page": ""
+          }
+        },
+        "collapsible_row_6TFier": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do you offer free shipping?",
+            "icon": "question_mark",
+            "row_content": "<p>Yes. We offer <strong>free shipping on orders over £50</strong>.</p><h3></h3>",
+            "page": ""
+          }
+        },
+        "collapsible_row_Qg46Rk": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How can I track my order?",
+            "icon": "question_mark",
+            "row_content": "<p>Once your order is shipped, you will receive tracking details via email and SMS.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_iyJMRm",
+        "collapsible_row_6TFier",
+        "collapsible_row_Qg46Rk"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "🛒 Orders",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "layout": "none",
+        "container_color_scheme": "",
+        "color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collapsible_content_PjiwX6": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_yArRhc": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is your return policy?",
+            "icon": "question_mark",
+            "row_content": "<p>We offer a <strong>7-day return window</strong> from the date of delivery.</p><h3></h3>",
+            "page": ""
+          }
+        },
+        "collapsible_row_FgtrB8": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do I need an unboxing video?",
+            "icon": "question_mark",
+            "row_content": "<p>Yes. An <strong>unboxing video is mandatory</strong> for all return, refund, and damage-related claims.</p><h3></h3>",
+            "page": ""
+          }
+        },
+        "collapsible_row_FQHQqi": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Who pays for return shipping?",
+            "icon": "question_mark",
+            "row_content": "<p>Customers are responsible for a <strong>£3 fixed return shipping fee</strong>.</p><h3></h3>",
+            "page": ""
+          }
+        },
+        "collapsible_row_6AeLyP": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How long do refunds take?",
+            "icon": "question_mark",
+            "row_content": "<p>Refunds are processed within <strong>8–15 business days</strong> after approval.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_rk9UYg": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What is your return policy?",
+            "icon": "question_mark",
+            "row_content": "<p>We offer a <strong>7-day return window</strong> from the date of delivery.</p><h3></h3>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_yArRhc",
+        "collapsible_row_FgtrB8",
+        "collapsible_row_FQHQqi",
+        "collapsible_row_6AeLyP",
+        "collapsible_row_rk9UYg"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "🔄 Returns & Refunds",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "layout": "none",
+        "container_color_scheme": "",
+        "color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collapsible_content_CEahah": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_Af943D": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What payment methods do you accept?",
+            "icon": "question_mark",
+            "row_content": "<p>We accept:</p><ul><li>Credit/Debit Cards</li><li>PayPal<br/></li></ul>",
+            "page": ""
+          }
+        },
+        "collapsible_row_NaNC9P": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do you offer Cash on Delivery (COD)?",
+            "icon": "question_mark",
+            "row_content": "<p>No, we do not offer COD at this time.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_Af943D",
+        "collapsible_row_NaNC9P"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "💳 Payments",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "layout": "none",
+        "container_color_scheme": "",
+        "color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collapsible_content_GVhhhX": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_4aWbBG": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What if my order is delayed?",
+            "icon": "question_mark",
+            "row_content": "<p>Delivery times are estimates. Delays may occur due to courier issues or external factors.</p><h3></h3>",
+            "page": ""
+          }
+        },
+        "collapsible_row_VxVhjL": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What if my package is lost or stolen?",
+            "icon": "question_mark",
+            "row_content": "<p>Once shipped, responsibility lies with the courier. However, you can contact us for assistance at <a>info@vixce.com</a>.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_ageKAg": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How can I track my order?",
+            "icon": "question_mark",
+            "row_content": "<p>Once your order is shipped, you will receive tracking details via email and SMS.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_4aWbBG",
+        "collapsible_row_VxVhjL",
+        "collapsible_row_ageKAg"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "",
+        "heading": "📦 Shipping Issues",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "layout": "none",
+        "container_color_scheme": "",
+        "color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_7DPmKP",
+    "collapsible_content_VwUt7n",
+    "collapsible_content_pTNYUY",
+    "collapsible_content_PjiwX6",
+    "collapsible_content_CEahah",
+    "collapsible_content_GVhhhX"
+  ]
+}

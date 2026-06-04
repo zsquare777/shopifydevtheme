@@ -1,0 +1,464 @@
+{% comment %}
+---------------------------------------------------------
+Copyright © 2025 Genius Maker. All rights reserved.
+Unauthorized copying, modification, distribution, or use
+of this code or any portion of it, is strictly prohibited.
+Violators will be prosecuted to the fullest extent of the law.
+For inquiries or permissions, contact +91 9672 366 086
+---------------------------------------------------------
+{% endcomment %}
+
+
+{% liquid
+  assign unique_id = section.id
+  assign top_star_color = section.settings.top_star_color
+  assign title = section.settings.title
+  assign subtitle = section.settings.subtitle
+  assign title_fs_desktop = section.settings.title_fs_desktop
+  assign title_fs_mobile = section.settings.title_fs_mobile
+  assign title_font_weight = section.settings.title_font_weight
+  assign slide_bg = section.settings.slide_bg
+  assign author_color = section.settings.author_color
+  assign author_fs_desktop = section.settings.author_fs_desktop
+  assign author_fs_mobile = section.settings.author_fs_mobile
+  assign review_color = section.settings.review_color
+  assign review_fs_desktop = section.settings.review_fs_desktop
+  assign review_fs_mobile = section.settings.review_fs_mobile
+  assign padding_top = section.settings.padding_top
+  assign padding_bottom = section.settings.padding_bottom
+%}
+   <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+   
+<style>
+.main-container-{{ unique_id }} {
+  width: 100%;
+  max-width: 1600px;
+  height: auto;
+  box-sizing: border-box;
+  pointer-events: none;
+  user-select: none;
+  padding-top: {{ padding_top }}em;
+  padding-bottom: {{ padding_bottom }}em;
+}
+
+.main-container-{{ unique_id }} .testimonial-top-{{ unique_id }} {
+ text-align: center;
+ margin-bottom: 20px;
+}
+
+.main-container-{{ unique_id }} .testimonial-top-{{ unique_id }} h2, 
+.main-container-{{ unique_id }} .testimonial-top-{{ unique_id }} h3 {
+  margin: 0;
+  padding: 0.3em;
+}
+
+.top-star-ratings-{{ unique_id }} {
+  color: {{ top_star_color }}; /*Change the top star colors from here*/
+  font-size: 1.2em;
+}
+    
+.testimonial-title-{{ unique_id }} {
+  text-align: center;
+  font-size: {{ title_fs_desktop }}em;
+  font-weight: {{ title_font_weight }};
+}
+
+testimonial-subtitle-{{ unique_id }} {
+  font-size: {{ title_fs_desktop | divided_by: 2 }}em;
+}
+
+.wrapper-container-{{ unique_id }}.swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+.content-container-{{ unique_id }} {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 300px;
+}
+
+.testimonial-card-{{ unique_id }} {
+  width: 100%;
+  height: 100%;
+  background: {{ slide_bg }};
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+  border: {% if section.settings.show_border %}1px solid #252423{% else %}none{% endif %};
+  padding:  0.5em;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.testimonial-image-{{ unique_id }} {
+  width: 100%;
+  aspect-ratio: 3 / 4; /* Enforce portrait orientation (width:height = 3:4) */
+  overflow: hidden;
+}
+
+.testimonial-card-{{ unique_id }} .testimonial-image-{{ unique_id }} img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.testimonial-stars-{{ unique_id }} .star-ratings-{{ unique_id }} {
+  margin-top: 15px;
+  font-size: 1em;
+}
+
+.testimonial-stars-{{ unique_id }} .star-gold-{{ unique_id }} {
+  color: #ffd700;
+}
+
+.testimonial-stars-{{ unique_id }} .star-gray-{{ unique_id }} {
+  color: #d3d3d3;
+}
+
+.testimonial-author-name-{{ unique_id }} {
+  font-size: {{ author_fs_desktop }}em;
+  font-weight: 700;
+  color: {{ author_color }};
+}
+
+.testimonial-body-{{ unique_id }} p{
+  font-size: {{ review_fs_desktop }}em;
+  font-style: italic;
+  color: {{ review_color }};
+}
+
+@media only screen and (max-width: 749px) {
+  .content-container-{{ unique_id }} {
+    max-width: 250px;
+  }
+
+  .testimonial-title-{{ unique_id }} {
+    font-size: {{ title_fs_mobile }}em;
+    padding-inline: 1em;
+  }
+
+  .testimonial-stars-{{ unique_id }} .star-ratings-{{ unique_id }} {
+    font-size: 0.7em;
+  }
+  .testimonial-author-name-{{ unique_id }} {
+    font-size: {{ author_fs_mobile }}em;
+  }
+  .testimonial-body-{{ unique_id }} p{
+   font-size: {{ review_fs_mobile }}em;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .content-container-{{ unique_id }} {
+    max-width: 200px;
+  }
+  .main-container-{{ unique_id }} .testimonial-top-{{ unique_id }} {
+    padding-inline: 1em;
+  }
+}
+
+q {
+  quotes: "“" "”" "‘" "’";
+}
+q::before {
+  content: open-quote;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-right: 0.3em;
+}
+q::after {
+  content: close-quote;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-left: 0.3em;
+}
+
+  </style>
+  
+
+   
+<div class="main-container-{{ unique_id }} swiper">
+  <div class="testimonial-top-{{ unique_id }}">
+    {% for i in (1..5) %}
+      <i class="fa-solid fa-star top-star-ratings-{{ unique_id }}"></i>
+   {% endfor %}
+   {% if title %}
+    <h2 class="testimonial-title-{{ unique_id }}">{{ title }}</h2>
+  {% endif %}
+  {% if subtitle %}
+    <h3 class="testimonial-subtitle-{{ unique_id }}">{{ subtitle }}</h3>
+  {% endif %}
+  </div>
+
+  <div class="wrapper-container-{{ unique_id }} swiper-wrapper">
+    <!-- Slide 1 -->
+    {% for block in section.blocks %}
+      {% liquid
+        assign image = block.settings.image
+        assign author_name = block.settings.author_name
+        assign review_body = block.settings.review_body
+        assign star_ratings = block.settings.star_ratings
+      %}
+    <div class="content-container-{{ unique_id }} swiper-slide">
+      <div class="testimonial-card-{{ unique_id }}">
+        <div class="testimonial-image-{{ unique_id }}">
+          {% if image %}
+            {{ image | image_url: width: 350, height: 450 | image_tag }}
+            {% else %}
+            {{ 'product-4' | placeholder_svg_tag }}
+           {% endif %}
+        </div>
+        <div class="testimonial-stars-{{ unique_id }}">
+          {% for star_rating in (1..5) %}
+            <i class="fa-solid fa-star star-ratings-{{ unique_id }} {% if star_rating <= star_ratings %}star-gold-{{ unique_id }}{% else %}star-gray-{{ unique_id }}{% endif %}"></i>
+          {% endfor %}
+        </div>
+        {% if author_name %}
+        <div class="testimonial-author-name-{{ unique_id }}">{{ author_name }}</div>
+        {% endif %}
+        {% if review_body %}
+        <div class="testimonial-body-{{ unique_id }}">
+        {{ review_body }}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      // Testimonial Slider JS
+      var swiper = new Swiper(".main-container-{{ unique_id }}", {
+        slidesPerView: "auto",
+        spaceBetween: 30,
+        loop: true,
+        speed: 4000,
+        freeMode: true,
+        autoplay: {
+          delay: 0,
+          disableOnInteraction: false,
+        },
+      });
+
+      document.addEventListener('DOMContentLoaded', () => {
+        const cards = document.querySelectorAll('.testimonial-card-{{ unique_id }}');
+        let maxHeight = 0;
+      
+        // Reset heights to auto to measure natural height
+        cards.forEach(card => {
+          card.style.height = 'auto';
+          const cardHeight = card.offsetHeight;
+          if (cardHeight > maxHeight) {
+            maxHeight = cardHeight;
+          }
+        });
+      
+        // Apply the maximum height to all cards
+        cards.forEach(card => {
+          card.style.height = `${maxHeight}px`;
+        });
+    });
+    </script>
+    
+{% schema %}
+  {
+    "name": "GM Testimonial Slider",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "show_border",
+        "label": "Show border",
+        "default": true
+      },
+      {
+        "type": "color",
+        "id": "top_star_color",
+        "label": "Top stars color",
+        "default": "#ffd700"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Hear From Our Happy Customers"
+      },
+      {
+        "type": "textarea",
+        "id": "subtitle",
+        "label": "Subtitle",
+        "default": "Real customers share why Flerixe has become their favorite brand to shop from."
+      },
+      {
+        "type": "select",
+        "id": "title_font_weight",
+        "label": "Title font weight",
+        "options": [
+          {
+            "value": "500",
+            "label": "Regular"
+          },
+          {
+            "value": "700",
+            "label": "Bold"
+          },
+          {
+            "value": "800",
+            "label": "Black"
+          }
+        ],
+        "default": "700"
+      },
+      {
+        "type": "range",
+        "id": "title_fs_desktop",
+        "label": "Title font size desktop",
+        "min": 1,
+        "max": 5,
+        "step": 0.5,
+        "default": 3,
+        "unit": "em"
+      },
+      {
+        "type": "range",
+        "id": "title_fs_mobile",
+        "label": "Title font size mobile",
+        "min": 0.5,
+        "max": 5,
+        "step": 0.5,
+        "default": 2,
+        "unit": "em"
+      },
+      {
+        "type": "color",
+        "id": "slide_bg",
+        "label": "Testimonial card background",
+        "info": "Enter the color as the background of the testimonial card"
+      },
+      {
+        "type": "range",
+        "id": "author_fs_desktop",
+        "label": "Name font size desktop",
+        "min": 0.2,
+        "max": 3,
+        "step": 0.2,
+        "default": 1.2,
+        "unit": "em"
+      },
+      {
+        "type": "range",
+        "id": "author_fs_mobile",
+        "label": "Name font size mobile",
+        "min": 0.2,
+        "max": 3,
+        "step": 0.2,
+        "default": 0.8,
+        "unit": "em"
+      },
+      {
+        "type": "color",
+        "id": "author_color",
+        "label": "Author name color"
+      },
+       {
+        "type": "range",
+        "id": "review_fs_desktop",
+        "label": "Review font size desktop",
+        "min": 0.2,
+        "max": 3,
+        "step": 0.2,
+        "default": 1,
+        "unit": "em"
+      },
+       {
+        "type": "range",
+        "id": "review_fs_mobile",
+        "label": "Review font size mobile",
+        "min": 0.2,
+        "max": 3,
+        "step": 0.2,
+        "default": 0.8,
+        "unit": "em"
+      },
+      {
+        "type": "color",
+        "id": "review_color",
+        "label": "Review body text color"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "label": "Padding top",
+        "min": 1,
+        "max": 5,
+        "step": 0.5,
+        "default": 2,
+        "unit": "em"
+      },
+       {
+        "type": "range",
+        "id": "padding_bottom",
+        "label": "Padding bottom",
+        "min": 1,
+        "max": 5,
+        "step": 0.5,
+        "default": 2,
+        "unit": "em"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "testimonial-slide",
+        "name": "Testimonial Slide",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Select image"
+          },
+          {
+            "type": "range",
+            "id": "star_ratings",
+            "label": "Choose star ratings",
+            "min": 1,
+            "max": 5,
+            "default": 3
+          },
+          {
+            "type": "text",
+            "id": "author_name",
+            "label": "Author name",
+            "default": "Genius Maker"
+          },
+          {
+            "type": "richtext",
+            "id": "review_body",
+            "label": "Add review"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "GM Testimonial Slider"
+      }
+    ]
+  }
+{% endschema %}

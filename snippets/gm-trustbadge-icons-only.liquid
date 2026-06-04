@@ -1,0 +1,55 @@
+{% comment %}
+  Four Icon Row Snippet
+  Displays 4 icons in a single row, using block settings for configuration.
+  Usage: {% render 'four-icon-row', block: block %}
+{% endcomment %}
+
+<div class="four-icon-row">
+  <div class="icon-grid">
+    {% assign max_size = block.settings.number_of_icons %}
+    {% for i in (1..max_size) %}
+      {% assign icon_key = 'trustbadge_icon_' | append: i %}
+      {% if block.settings[icon_key] %}
+        <div class="icon-item">
+          {{ block.settings[icon_key] | image_url: width: 100 | image_tag }}
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+<style>
+  .four-icon-row {
+    width: 100%;
+    background-color: #fff;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .icon-grid {
+    display: grid;
+    grid-template-columns: repeat({{ max_size }}, 1fr);
+    gap: 10px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .icon-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+  .icon-item img {
+    width: 100%;
+    max-width: 100px;
+    height: auto;
+  }
+
+  @media only screen and (max-width: 750px){
+      .icon-grid {
+        gap: 10px;
+      }
+  }
+
+</style>

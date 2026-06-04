@@ -1,0 +1,717 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h0"
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Shop all",
+            "button_link_1": "shopify://collections/all",
+            "button_style_secondary_1": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "button"
+      ],
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/ChatGPT_Image_May_25_2026_01_37_06_AM.png",
+        "image_overlay_opacity": 40,
+        "image_height": "large",
+        "image_behavior": "none",
+        "desktop_content_position": "bottom-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": false,
+        "color_scheme": "scheme-3",
+        "stack_images_on_mobile": false,
+        "mobile_content_alignment": "center",
+        "show_text_below": false
+      }
+    },
+    "gm_autoplay_slideshow_QCGybh": {
+      "type": "gm-autoplay-slideshow",
+      "blocks": {
+        "banner_TREQcU": {
+          "type": "banner",
+          "settings": {
+            "desktop_banner": "shopify://shop_images/ChatGPT_Image_May_25_2026_01_37_06_AM.png",
+            "link": ""
+          }
+        },
+        "banner_ib7mfD": {
+          "type": "banner",
+          "settings": {
+            "desktop_banner": "shopify://shop_images/ChatGPT_Image_May_25_2026_01_37_06_AM.png",
+            "link": "shopify://collections"
+          }
+        }
+      },
+      "block_order": [
+        "banner_TREQcU",
+        "banner_ib7mfD"
+      ],
+      "name": "Autoplay Banner",
+      "settings": {
+        "autoplay_speed": 2000,
+        "bullet_color": "#62bd69",
+        "active_bullet_color": "#62bd69"
+      }
+    },
+    "gm_collection_slider_thBGwn": {
+      "type": "gm-collection-slider",
+      "name": "GM Collection Slider",
+      "settings": {
+        "collection_slider": [
+          "https-development-ldluvlud-myshopify-com-collections-slippers"
+        ],
+        "gradient_color": "linear-gradient(90deg, rgba(121, 251, 251, 1), rgba(68, 117, 249, 1) 48%, rgba(249, 72, 63, 0.7595) 100%)",
+        "collection_width": 200,
+        "scrollbar_color": "#ff6347",
+        "margin_block": 0
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "custom_css": [
+        "h2 {text-align: center;}"
+      ],
+      "settings": {
+        "collection": "all",
+        "products_to_show": 8,
+        "title": "Featured products",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 44,
+        "padding_bottom": 36
+      }
+    },
+    "collection_tabs_yXeET8": {
+      "type": "collection-tabs",
+      "blocks": {
+        "collection_QAkYeQ": {
+          "type": "collection",
+          "settings": {
+            "title": "Best Sellers",
+            "collection": "slippers",
+            "product_limit": 6,
+            "product_row_count": 4,
+            "mobile_product_row_count": 1,
+            "enable_swiper_on_mobile": false,
+            "product_image_orientation": "square",
+            "button_mt": 48,
+            "button_text": "Shop Now",
+            "button_link": "shopify://collections/all"
+          }
+        },
+        "collection_UJGgUE": {
+          "type": "collection",
+          "settings": {
+            "title": "New Arrivals",
+            "collection": "",
+            "product_limit": 6,
+            "product_row_count": 4,
+            "mobile_product_row_count": 1,
+            "enable_swiper_on_mobile": false,
+            "product_image_orientation": "square",
+            "button_mt": 48,
+            "button_text": "Shop Now",
+            "button_link": "shopify://collections/all"
+          }
+        },
+        "collection_dg4dj8": {
+          "type": "collection",
+          "settings": {
+            "title": "Analog",
+            "collection": "",
+            "product_limit": 6,
+            "product_row_count": 4,
+            "mobile_product_row_count": 1,
+            "enable_swiper_on_mobile": false,
+            "product_image_orientation": "square",
+            "button_mt": 48,
+            "button_text": "Shop Now",
+            "button_link": "shopify://collections/all"
+          }
+        },
+        "collection_GdqUfG": {
+          "type": "collection",
+          "settings": {
+            "title": "Objects",
+            "collection": "",
+            "product_limit": 6,
+            "product_row_count": 4,
+            "mobile_product_row_count": 1,
+            "enable_swiper_on_mobile": false,
+            "product_image_orientation": "square",
+            "button_mt": 48,
+            "button_text": "Shop Now",
+            "button_link": "shopify://collections/all"
+          }
+        }
+      },
+      "block_order": [
+        "collection_QAkYeQ",
+        "collection_UJGgUE",
+        "collection_dg4dj8",
+        "collection_GdqUfG"
+      ],
+      "name": "SS - Featured Collections (tabs)",
+      "settings": {
+        "tabs_color": "#7e7e7e",
+        "tabs_color_active": "#000000",
+        "tabs_size": 18,
+        "tabs_size_mobile": 14,
+        "tabs_padding_bottom": 16,
+        "tabs_align": "center",
+        "tabs_spacing": 48,
+        "tabs_spacing_mobile": 36,
+        "tabs_margin_bottom": 40,
+        "secondary_image_hover": true,
+        "image_roundness": 0,
+        "image_gap": 20,
+        "product_title_size": 14,
+        "product_title_line_height": 1.3,
+        "product_title_color": "#212121",
+        "product_price_size": 14,
+        "discounted_price_color": "#ff3451",
+        "normal_price_color": "#212121",
+        "button_color": "#ffffff",
+        "button_background_color": "#000000",
+        "button_color_hover": "#ffffff",
+        "button_background_color_hover": "#000000",
+        "button_border_color": "#ffffff",
+        "button_height": 44,
+        "button_width": 200,
+        "button_font_size": 16,
+        "button_border_radius": 2,
+        "button_border_thickness": 0,
+        "background-color": "#ffffff",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 56,
+        "padding_bottom": 36,
+        "padding_sides": 5,
+        "padding_sides_mobile": 1.5,
+        "section-width": 120
+      }
+    },
+    "collection_list_GmLgXM": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_QrciTm": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "slippers"
+          }
+        },
+        "featured_collection_gnbybm": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "slippers"
+          }
+        },
+        "featured_collection_cgDwDi": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "slippers"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_QrciTm",
+        "featured_collection_gnbybm",
+        "featured_collection_cgDwDi"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "title": "Collections",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "gm_scrolling_text_big_kEWJkD": {
+      "type": "gm-scrolling-text-big",
+      "blocks": {
+        "scrolling_text_6EgTac": {
+          "type": "scrolling-text",
+          "settings": {
+            "scrolling_text": "Top-notch Products at the Best Prices"
+          }
+        }
+      },
+      "block_order": [
+        "scrolling_text_6EgTac"
+      ],
+      "name": "GM Scrolling Text",
+      "settings": {
+        "bg_color": "linear-gradient(90deg, hsl(147deg 100% 58%) 0%, hsl(200deg 85% 62%) 34%, hsl(246deg 84% 70%) 68%, hsl(284deg 100% 84%) 100%)",
+        "font_size_desktop": 4,
+        "font_size_mb": 3,
+        "text_color": "#1e1e1e",
+        "icon_color": "#1e1e1e"
+      }
+    },
+    "gm_testimonial_slider_EMKT7t": {
+      "type": "gm-testimonial-slider",
+      "blocks": {
+        "testimonial_slide_eyy4dm": {
+          "type": "testimonial-slide",
+          "settings": {
+            "star_ratings": 5,
+            "author_name": "Genius Maker",
+            "review_body": ""
+          }
+        },
+        "testimonial_slide_qTVGbK": {
+          "type": "testimonial-slide",
+          "settings": {
+            "image": "shopify://shop_images/3.jpg",
+            "star_ratings": 5,
+            "author_name": "Genius Maker",
+            "review_body": ""
+          }
+        },
+        "testimonial_slide_HVPfCM": {
+          "type": "testimonial-slide",
+          "settings": {
+            "image": "shopify://shop_images/3.jpg",
+            "star_ratings": 5,
+            "author_name": "Genius Maker",
+            "review_body": ""
+          }
+        },
+        "testimonial_slide_Wi8idi": {
+          "type": "testimonial-slide",
+          "settings": {
+            "image": "shopify://shop_images/3.jpg",
+            "star_ratings": 5,
+            "author_name": "Genius Maker",
+            "review_body": ""
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_slide_eyy4dm",
+        "testimonial_slide_qTVGbK",
+        "testimonial_slide_HVPfCM",
+        "testimonial_slide_Wi8idi"
+      ],
+      "name": "GM Testimonial Slider",
+      "settings": {
+        "show_border": true,
+        "top_star_color": "#ffd700",
+        "title": "Hear From Our Happy Customers",
+        "subtitle": "Real customers share why Flerixe has become their favorite brand to shop from.",
+        "title_font_weight": "700",
+        "title_fs_desktop": 3,
+        "title_fs_mobile": 2,
+        "slide_bg": "",
+        "author_fs_desktop": 1.2,
+        "author_fs_mobile": 0.8,
+        "author_color": "",
+        "review_fs_desktop": 1,
+        "review_fs_mobile": 0.8,
+        "review_color": "",
+        "padding_top": 2,
+        "padding_bottom": 2
+      }
+    },
+    "multicolumn_JbAUp3": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_MWbtRR": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Cuppingset3.jpg",
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "coll",
+            "link": "shopify://collections/slippers"
+          }
+        },
+        "column_C4jgqq": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_BCnUA8": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_MWbtRR",
+        "column_C4jgqq",
+        "column_BCnUA8"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Multicolumn",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "Button label",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "trustbadge_style_1_y8tQKk": {
+      "type": "trustbadge-style-1",
+      "blocks": {
+        "image_yigUqU": {
+          "type": "image",
+          "settings": {
+            "feature_title": "Free Shipping",
+            "feature_text": "Order today, receive tomorrow",
+            "feature_url": "",
+            "hide_image": false
+          }
+        },
+        "image_jUEHbL": {
+          "type": "image",
+          "settings": {
+            "feature_title": "Price-match guarantee",
+            "feature_text": "Safe money when ordering with us",
+            "feature_url": "",
+            "hide_image": false
+          }
+        },
+        "image_gpjaeH": {
+          "type": "image",
+          "settings": {
+            "feature_title": "Hassle-free exchange",
+            "feature_text": "Receive a slip for exchanges",
+            "feature_url": "",
+            "hide_image": false
+          }
+        },
+        "image_qrGDkq": {
+          "type": "image",
+          "settings": {
+            "feature_title": "5.0 Google Reviews",
+            "feature_text": "Customer satisfaction #1 priority",
+            "feature_url": "",
+            "hide_image": false
+          }
+        }
+      },
+      "block_order": [
+        "image_yigUqU",
+        "image_jUEHbL",
+        "image_gpjaeH",
+        "image_qrGDkq"
+      ],
+      "name": "Basic Trust Badges",
+      "settings": {
+        "feature_row": 4,
+        "feature_row_mobile": 1,
+        "feature_gap": 20,
+        "feature_gap_mobile": 20,
+        "feature_padding_vertical": 0,
+        "feature_padding_horizontal": 0,
+        "feature_radius": 16,
+        "feature_border_thickness": 0,
+        "feature_shadow": false,
+        "feature_heading_custom": false,
+        "feature_heading_font": "josefin_sans_n4",
+        "feature_heading_size": 14,
+        "feature_heading_size_mobile": 12,
+        "feature_heading_height": 130,
+        "feature_heading_mt": 8,
+        "feature_text_custom": false,
+        "feature_text_font": "josefin_sans_n4",
+        "feature_text_size": 12,
+        "feature_text_size_mobile": 12,
+        "feature_text_height": 130,
+        "feature_text_mt": 4,
+        "feature_icon_size": 42,
+        "feature_icon_size_mobile": 42,
+        "feature_bg": "#ffffff",
+        "feature_border_color": "#000000",
+        "feature_shadow_color": "#000000",
+        "feature_heading_color": "#000000",
+        "feature_text_color": "#000000",
+        "feature_icon_color": "#000000",
+        "background_color": "#ffffff",
+        "background_gradient": "",
+        "border_color": "#000000",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 16,
+        "padding_bottom": 16,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 1.5,
+        "full_width": false,
+        "content_width": 120,
+        "border_thickness": 0,
+        "lazy": true
+      }
+    },
+    "logo_slider_VphXYk": {
+      "type": "logo-slider",
+      "blocks": {
+        "logo_UJDGDk": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/3.jpg"
+          }
+        },
+        "logo_x7Pp4g": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/3.jpg"
+          }
+        },
+        "logo_hyUJyW": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/3.jpg"
+          }
+        },
+        "logo_4txXME": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/3.jpg"
+          }
+        },
+        "logo_Ew8pqy": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Spa_Nexcia_3oz_Product_image.jpg"
+          }
+        },
+        "logo_wNYRyY": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Spa_Nexcia_3oz_Product_image.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "logo_UJDGDk",
+        "logo_x7Pp4g",
+        "logo_hyUJyW",
+        "logo_4txXME",
+        "logo_Ew8pqy",
+        "logo_wNYRyY"
+      ],
+      "name": "Logo Slider",
+      "settings": {
+        "background_color": "#ffffff",
+        "title": "Your Heading Goes Here",
+        "title_font": "trirong_n4",
+        "fontsize": 30,
+        "fontsize_mobile": 20,
+        "marginbottom": 20,
+        "marginbottom_mobile": 20,
+        "padding_topbottom": 60,
+        "speed": 25,
+        "height": 50,
+        "height_mobile": 50
+      }
+    },
+    "17797490054a96f6ef": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_videos_carousel_A9dAXG": {
+          "type": "shopify://apps/judge-me-reviews/blocks/videos_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "show_sample_reviews": true,
+            "reviews_selection": "all",
+            "products": [],
+            "star_rating": "all",
+            "review_type": "photo_and_video",
+            "max_reviews": 20,
+            "show_reviewer_name": true,
+            "stars_size": "medium",
+            "text_size": "medium",
+            "arrows_position": "bottom",
+            "max_width": 1100,
+            "corner_styling": "soft",
+            "header_text_color": "#000000",
+            "card_color": "#7d7d7d",
+            "stars_color": "",
+            "text_color": "#ffffff",
+            "arrows_color": "#000000",
+            "show_drop_shadow": false,
+            "show_border": false,
+            "border_color": "#108474",
+            "autoplay_media": true,
+            "transition_speed": 5,
+            "carousel_style": "highlight",
+            "header_text": "Real customer stories",
+            "show_average_rating": true
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_videos_carousel_A9dAXG"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "1779788437fd68ccde": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_cards_carousel_Gyt9aq": {
+          "type": "shopify://apps/judge-me-reviews/blocks/cards_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "show_sample_reviews": true,
+            "reviews_selection": "all",
+            "products": [],
+            "star_rating": "all",
+            "show_review_media": true,
+            "display_order": "media_first",
+            "no_image_fallback": "review_text_only",
+            "max_reviews": 20,
+            "review_length": "medium",
+            "text_size": "medium",
+            "image_ratio": "1",
+            "reviews_shown": 4,
+            "show_reviewer_name": true,
+            "show_product_name": true,
+            "hide_arrows_mobile": true,
+            "arrows_position": "sides",
+            "max_width": 1100,
+            "corner_styling": "soft",
+            "header_text_color": "#000000",
+            "text_color": "#000000",
+            "card_color": "#f9f9f9",
+            "stars_color": "",
+            "arrows_color": "#000000",
+            "transition_speed": 5,
+            "header_text": "Customers are saying",
+            "show_average_rating": true
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_cards_carousel_Gyt9aq"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "1779788476a5ce136e": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_cards_carousel_yBV8Qe": {
+          "type": "shopify://apps/judge-me-reviews/blocks/cards_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "show_sample_reviews": true,
+            "reviews_selection": "all",
+            "products": [],
+            "star_rating": "all",
+            "show_review_media": true,
+            "display_order": "media_first",
+            "no_image_fallback": "review_text_only",
+            "max_reviews": 20,
+            "review_length": "medium",
+            "text_size": "medium",
+            "image_ratio": "1",
+            "reviews_shown": 4,
+            "show_reviewer_name": true,
+            "show_product_name": true,
+            "hide_arrows_mobile": true,
+            "arrows_position": "sides",
+            "max_width": 1100,
+            "corner_styling": "soft",
+            "header_text_color": "#000000",
+            "text_color": "#000000",
+            "card_color": "#F9F9F9",
+            "stars_color": "",
+            "arrows_color": "#000000",
+            "transition_speed": 5,
+            "header_text": "Customers are saying",
+            "show_average_rating": true
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_cards_carousel_yBV8Qe"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "image_banner",
+    "gm_autoplay_slideshow_QCGybh",
+    "gm_collection_slider_thBGwn",
+    "featured_collection",
+    "collection_tabs_yXeET8",
+    "collection_list_GmLgXM",
+    "gm_scrolling_text_big_kEWJkD",
+    "gm_testimonial_slider_EMKT7t",
+    "multicolumn_JbAUp3",
+    "trustbadge_style_1_y8tQKk",
+    "logo_slider_VphXYk",
+    "17797490054a96f6ef",
+    "1779788437fd68ccde",
+    "1779788476a5ce136e"
+  ]
+}

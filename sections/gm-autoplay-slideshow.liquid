@@ -1,0 +1,257 @@
+{% comment %}
+---------------------------------------------------------
+Copyright © 2025 Genius Maker. All rights reserved.
+Unauthorized copying, modification, distribution, or use
+of this code or any portion of it, is strictly prohibited.
+Violators will be prosecuted to the fullest extent of the law.
+For inquiries or permissions, contact +91 9672 366 086
+---------------------------------------------------------
+{% endcomment %}
+
+{%- liquid
+  assign unique_id = section.id
+  assign autoplay_speed = section.settings.autoplay_speed
+  assign bullet_color = section.settings.bullet_color
+  assign active_bullet_color = section.settings.active_bullet_color
+  assign highest_desktop_ratio = 0
+  assign highest_mobile_ratio = 0
+  for block in section.blocks
+    if block.settings.desktop_banner and block.settings.desktop_banner.aspect_ratio
+      if block.settings.desktop_banner.aspect_ratio > highest_desktop_ratio
+        assign highest_desktop_ratio = block.settings.desktop_banner.aspect_ratio
+      endif
+    endif
+    if block.settings.mobile_banner and block.settings.mobile_banner.aspect_ratio
+      if block.settings.mobile_banner.aspect_ratio > highest_mobile_ratio
+        assign highest_mobile_ratio = block.settings.mobile_banner.aspect_ratio
+      endif
+    endif
+  endfor
+  assign highest_desktop_ratio = highest_desktop_ratio | default: 1.7778
+  assign highest_mobile_ratio = highest_mobile_ratio | default: 1.7778
+-%}
+
+{% style %}
+
+  .autoplay-banner-{{ unique_id }} *,
+  .autoplay-banner-{{ unique_id }} *::after,
+  .autoplay-banner-{{ unique_id }} *::before {
+    box-sizing: border-box;
+  }
+  .autoplay-banner-{{ unique_id }} {
+    width: 100%;
+    position: relative;
+  }
+
+  .banner--image-{{ unique_id }} {
+    width:  100%;
+    height: auto;
+  }  
+
+  .container-{{ unique_id }} {
+    width: 100%;
+    height: 0;
+    padding-bottom: {{ 1 | divided_by: highest_desktop_ratio | times: 100 }}%;
+    background: #ddd;
+    position: relative;
+    transition: padding-bottom 0.3s ease;
+  }
+
+  .banner--image-{{ unique_id }} picture,
+  .banner--image-{{ unique_id }} img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .autoplay-banner-{{ unique_id }} .swiper-pagination{
+    position: relative;
+    margin-top: 20px;
+    min-height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    transition: visibility 0.3s linear;
+  }
+
+  .autoplay-banner-{{ unique_id }} .swiper-pagination.swiper-pagination-bullets {
+    visibility: visible;
+    opacity: 1; /* Becomes visible when Swiper initializes */
+  }
+
+  .autoplay-banner-{{ unique_id }} .swiper-pagination-bullet{
+    width: 16px;
+    height: 8px;
+    border-radius: 6px;
+    background-color: {{ bullet_color }};
+    transition: all 0.5s ease-in-out;
+  }
+
+  .autoplay-banner-{{ unique_id }} .swiper-pagination-bullet-active{
+    width: 32px;
+    background-color: {{ active_bullet_color }}; 
+  }
+
+  @media screen and (max-width: 749px){
+  .container-{{ unique_id }} {
+    padding-bottom: {{ 1 | divided_by: highest_mobile_ratio | times: 100 }}%;
+    }
+
+  .autoplay-banner-{{ unique_id }} .swiper-pagination{
+    margin-top: 10px;
+    min-height: 12px;
+   }
+
+  .autoplay-banner-{{ unique_id }} .swiper-pagination-bullet{
+    width: 12px;
+    height: 6px;
+   }
+
+  .autoplay-banner-{{ unique_id }} .swiper-pagination-bullet-active{
+    width: 24px; 
+   }
+  }
+{% endstyle %}
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+>
+
+{% comment %}
+  Swiper Section
+{% endcomment %}
+{% if section.blocks.size > 0 %}
+<div class="swiper autoplay-banner-{{ unique_id }}">
+  <div class="swiper-wrapper">
+    {% for block in section.blocks %}
+      <div class="swiper-slide banner--image-{{ unique_id }}">
+        <div class="container-{{ unique_id }}">
+        <a href="{{ block.settings.link }}">
+          <picture>
+            {% if block.settings.desktop_banner != blank %}
+            <source 
+              media="(min-width: 750px)"
+              srcset="{{ block.settings.desktop_banner | image_url: width: block.settings.desktop_banner.width, height: block.settings.desktop_banner.height }}"
+              width="{{ block.settings.desktop_banner.width }}"
+              height="{{ block.settings.desktop_banner.height }}"
+              >
+            {% endif %}
+           {% if block.settings.mobile_banner != blank %}
+            <source
+              media="(max-width: 749px)"  
+              srcset="{{ block.settings.mobile_banner | image_url: width: block.settings.mobile_banner.width, height: block.settings.mobile_banner.height }}"
+              width="{{ block.settings.mobile_banner.width }}"
+              height="{{ block.settings.mobile_banner.height }}"
+            >
+           {% endif %}
+            <img
+              src="{% if block.settings.desktop_banner != blank %}{{ block.settings.desktop_banner | image_url: width: block.settings.desktop_banner.width, height: block.settings.desktop_banner.height }}{% else %}{{ block.settings.mobile_banner | image_url: width: block.settings.mobile_banner.width, height: block.settings.mobile_banner.height }}{% endif %}"
+              alt="{{ block.settings.desktop_banner.alt | default: block.settings.mobile_banner.alt | escape }}"
+              width="{% if block.settings.desktop_banner != blank %}{{ block.settings.desktop_banner.width }}{% elsif block.settings.mobile_banner != blank %}{{ block.settings.mobile_banner.width }}{% else %}1200{% endif %}"
+              height="{% if block.settings.desktop_banner != blank %}{{ block.settings.desktop_banner.height }}{% elsif block.settings.mobile_banner != blank %}{{ block.settings.mobile_banner.height }}{% else %}{{ 1200 | divided_by: lowest_desktop_ratio | round }}{% endif %}"
+              loading="eager"
+              >
+          </picture>
+         </a>
+       </div>
+      </div>
+    {% endfor %}
+  </div>
+  {% if section.blocks.size > 1 %}
+   <div class="swiper-pagination banner-pagination-{{ unique_id }}"></div>
+  {% endif %}
+</div>
+{% else %}
+  <div class=".container-{{ unique_id }}">
+    {{ 'hero-apparel-1' | placeholder_svg_tag: 'placeholder_svg' }}
+  </div>
+  {% endif %}
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer="defer"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(){
+    var swiper = new Swiper(".autoplay-banner-{{ unique_id }}", {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    centeredSlides: false,
+    loop: true,
+    autoplay: {
+      delay: {{ autoplay_speed }},
+      disableOnInteraction: false
+    },
+    pagination: {
+      el: ".banner-pagination-{{ unique_id }}",
+      clickable: true
+    },
+   on: {
+     init: function(){
+       console.log("Swiper initialized after DOM is ready.")
+     }
+   },
+    });
+
+  });
+</script>
+
+{% schema %}
+  {
+    "name": "Autoplay Banner",
+    "settings": [
+      {
+        "type": "range",
+        "id": "autoplay_speed",
+        "label": "Autoplay speed",
+        "min": 0,
+        "max": 9000,
+        "step": 1000,
+        "default": 2000,
+        "unit": "ms",
+        "info": "1 second = 1000ms"
+      },
+      {
+        "type": "color",
+        "id": "bullet_color",
+        "label": "Bullet color",
+        "default": "#62BD69"
+      },
+      {
+        "type": "color",
+        "id": "active_bullet_color",
+        "label": "Active bullet color",
+        "default": "#62BD69"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "banner",
+        "name": "Banner",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "desktop_banner",
+            "label": "Desktop banner"
+          },
+          {
+            "type": "image_picker",
+            "id": "mobile_banner",
+            "label": "Mobile banner"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Link"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Autoplay Banner"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,176 @@
+{% comment %}
+
+---------------------------------------------------------
+Copyright © 2025 Genius Maker. All rights reserved.
+Unauthorized copying, modification, distribution, or use
+of this code or any portion of it, is strictly prohibited.
+Violators will be prosecuted to the fullest extent of the law.
+For inquiries or permissions, contact +91 9672 366 086
+---------------------------------------------------------
+
+{% endcomment %}
+
+{% liquid
+  assign bg_color = section.settings.bg_color
+  assign font_size_desktop = section.settings.font_size_desktop
+  assign font_size_mobile = section.settings.font_size_mb
+  assign font_color = section.settings.text_color
+  assign icon_color = section.settings.icon_color
+%}
+
+<style>
+  .scrolling-text-main-container {
+    width: 100%;
+    box-sizing: border-box;
+    background: {{ bg_color }};
+    overflow: hidden; /* Ensure no overflow issues */
+    margin: 0;
+  }
+
+  .scrolling-text-main-container .gm-scrolling-text-content {
+    display: flex;
+    --gap: 20px;
+    gap: var(--gap);
+    user-select: none;
+    white-space: nowrap; /* Prevent text from wrapping */
+  }
+
+  .scrolling-text-main-container .gm-scrolling-text-content ul {
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--gap);
+    min-width: 100%;
+    animation: scrollingTextAnimation 20s linear infinite;
+  }
+
+  .scrolling-text-main-container .gm-scrolling-text-content:hover ul {
+    animation-play-state: paused;
+  }
+
+  .scrolling-text-main-container .gm-scrolling-text-content .scrolling-text {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: {{ font_size_desktop }}rem;
+    color: {{ font_color }}; /* Ensure text is visible */
+  }
+
+  .scrolling-text-main-container .gm-scrolling-text-content .separator {
+    font-size: {{ font_size_desktop }}rem;
+    color: {{ icon_color }}; /* Match the text color */
+  }
+
+  @media only screen and (max-width: 749px){
+    .scrolling-text-main-container .gm-scrolling-text-content .scrolling-text{
+      font-size: {{ font_size_mobile }}rem;
+    }
+  }
+
+  @keyframes scrollingTextAnimation {
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+</style>
+
+<section class="scrolling-text-main-container">
+  <div class="gm-scrolling-text-content">
+    <ul>
+      {% for block in section.blocks %}
+        {% if forloop.first %}
+          <li class="separator">✦</li>
+        {% endif %}
+        <li class="gm--scrolling-text" {{ block.shopify_attributes }}>
+          <span class="scrolling-text">{{ block.settings.scrolling_text }}</span>
+        </li>
+         {% unless forloop.last %}
+          <li class="separator">✦</li>
+        {% endunless %}
+      {% endfor %}
+    </ul>
+    <!-- Duplicate the content for seamless scrolling -->
+    <ul aria-hidden="true">
+      {% for block in section.blocks %}
+         {% if forloop.first %}
+          <li class="separator">✦</li>
+        {% endif %}
+        <li class="gm--scrolling-text" {{ block.shopify_attributes }}>
+          <span class="scrolling-text">{{ block.settings.scrolling_text }}</span>
+        </li>
+        {% unless forloop.last %}
+         <li class="separator">✦</li>
+        {% endunless %}
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "GM Scrolling Text",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "color_background",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "linear-gradient(90deg, hsl(147deg 100% 58%) 0%, hsl(200deg 85% 62%) 34%, hsl(246deg 84% 70%) 68%, hsl(284deg 100% 84%) 100%)"
+    },
+    {
+      "type": "range",
+      "id": "font_size_desktop",
+      "label": "Font Size Desktop",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "default": 4,
+      "unit": "rem"
+    },
+     {
+      "type": "range",
+      "id": "font_size_mb",
+      "label": "Font Size Mobile",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "default": 3,
+      "unit": "rem"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#1e1e1e"
+    },
+   {
+      "type": "color",
+      "id": "icon_color",
+      "label": "Icon Color",
+      "default": "#1e1e1e"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Scrolling Text",
+      "type": "scrolling-text",
+      "settings": [
+        {
+          "type": "text",
+          "id": "scrolling_text",
+          "label": "Scrolling Text",
+          "default": "Top-notch Products at the Best Prices"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "GM Scrolling Text"
+    }
+  ]
+}
+{% endschema %}

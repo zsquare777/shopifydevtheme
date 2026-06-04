@@ -1,0 +1,248 @@
+{%- liquid
+  assign background_color = section.settings.background_color
+  assign padding_topbottom = section.settings.padding_topbottom
+  assign speed = section.settings.speed
+  assign height = section.settings.height
+  assign height_mobile = section.settings.height_mobile
+  assign title  = section.settings.title
+  assign fontsize  = section.settings.fontsize
+  assign fontsize_mobile = section.settings.fontsize_mobile
+  assign marginbottom = section.settings.marginbottom
+  assign marginbottom_mobile = section.settings.marginbottom_mobile
+  assign title_font = section.settings.title_font
+-%}
+
+<style>
+
+{{  title_font | font_face: font_display: 'swap' }}
+
+  
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+
+  .logos-{{ section.id }} {
+      background: #f2f2f2;
+  }
+
+  @keyframes slide {
+      from {
+          transform: translateX(0);
+      }
+      to {
+          transform: translateX(-100%);
+      }
+  }
+
+  .logos-{{ section.id }} {
+      overflow: hidden;
+      padding: {{ padding_topbottom }}px 0;
+      background: {{ background_color }};
+      white-space: nowrap;
+      position: relative;
+  }
+
+  .logos-{{ section.id }}:before,
+  .logos-{{ section.id }}:after {
+  position:absolute;
+  top: 0;
+  width: 20%;
+  height: 100%;
+  content: "";
+  z-index: 2;
+  }
+
+  .logos-{{ section.id }}:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255,255,255,0), white);
+  }
+
+  .logos-{{ section.id }}:after {
+      right: 0;
+      background: linear-gradient(to right, rgba(255,255,255,0), white);
+      }
+
+  .logos-{{ section.id }}:hover .logos-slide {
+      animation-play-state: paused;
+  }
+
+  .logos-{{ section.id }} .logos-slide {
+      display: inline-block;
+      animation: {{ speed }}s slide infinite linear;
+  }
+
+  .section-{{ section.id }} .logos-slide img {
+      height: {{ height }}px;
+      margin: 0 40px;
+  }
+
+
+  @media screen and (max-width: 767px){
+  .section-{{ section.id }}  .logos-slide img {
+      height: {{ height_mobile }}px;
+     }
+  }
+
+  .logos-{{ section.id }} h3 {
+    font-size: {{ fontsize }}px;
+    text-align: center;
+    margin-bottom: {{ marginbottom }}px;
+    font-family: {{ title_font.family }}, {{ title_font.fallback_families }};
+   max-width: 80%;
+    margin-left: 10%;
+  }
+
+  @media screen and (max-width: 767px){
+    .logos-{{ section.id }} h3 {
+      font-size: {{ fontsize_mobile }}px;
+      margin-bottom: {{ marginbottom_mobile }}px;
+    }
+  }
+</style>
+
+<div class="section-{{ section.id }} logos-{{ section.id }}">
+  {% if title != blank %}
+  <h3>{{ title }}</h3>
+  {% endif %}
+  <div class="logos-slide">
+    {% for block in section.blocks %}
+      <img src="{{ block.settings.logo | img_url: 'master' }}" alt="">
+    {% endfor %}
+  </div>
+</div>
+
+<script>
+  var copy = document.querySelector(".logos-slide").cloneNode(true);
+  document.querySelector('.logos-{{ section.id }}').appendChild(copy);
+</script>
+
+{% schema %}
+{
+"name": "Logo Slider",
+"settings":[
+
+    {
+        "type": "color",
+        "label": "Section background",
+        "id": "background_color",
+        "default": "#FFFFFF"
+      },
+
+  {
+    "type": "text",
+    "id": "title",
+    "label": "Title",
+    "default": "Your Heading Goes Here"
+  },
+    {
+      "type": "font_picker",
+      "label": "Title Font",
+      "id": "title_font",
+      "default": "americana_n4"
+    },
+  {
+    "type": "range",
+    "id": "fontsize",
+    "label": "Font Size",
+    "min": 2,
+    "max": 200,
+    "step": 2,
+    "default": 30,
+    "unit": "px"
+  },
+
+    {
+    "type": "range",
+    "id": "fontsize_mobile",
+    "label": "Font Size Mobile",
+    "min": 2,
+    "max": 200,
+    "step": 2,
+    "default": 20,
+    "unit": "px"
+  },
+
+      {
+    "type": "range",
+    "id": "marginbottom",
+    "label": "Margin Bottom Title",
+    "min": 2,
+    "max": 200,
+    "step": 2,
+    "default": 20,
+    "unit": "px"
+  },
+
+        {
+    "type": "range",
+    "id": "marginbottom_mobile",
+    "label": "Margin Bottom Mobile Title",
+    "min": 2,
+    "max": 200,
+    "step": 2,
+    "default": 20,
+    "unit": "px"
+  },
+  {
+    "type": "range",
+    "id": "padding_topbottom",
+    "label": "Padding Top-Bottom",
+    "min": 2,
+    "max": 200,
+    "step": 2,
+    "default": 60,
+    "unit": "px"
+  },
+  {
+    "type": "range",
+    "id": "speed",
+    "label": "Animation Speed",
+    "min": 1,
+    "max": 100,
+    "step": 1,
+    "default": 25,
+    "unit": "s"
+  },
+   {
+    "type": "range",
+    "id": "height",
+    "label": "Logo Height",
+    "min": 2,
+    "max": 200,
+    "step": 2,
+    "default": 50,
+    "unit": "px"
+  },
+    {
+    "type": "range",
+    "id": "height_mobile",
+    "label": "Logo Height Mobile",
+    "min": 2,
+    "max": 200,
+    "step": 2,
+    "default": 50,
+    "unit": "px"
+  }
+],
+"blocks":[
+      {
+        "type": "logo",
+        "name": "Logo",
+        "settings": [
+        {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Logo Image"
+     }
+  ]
+}
+],
+"presets": [
+{
+"name": "Logo Slider",
+}
+]
+}
+{% endschema %}
