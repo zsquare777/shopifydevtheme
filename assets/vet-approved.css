@@ -1,0 +1,59 @@
+.vet-approved__wrapper {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+.vet-approved__image-wrapper {
+  position: relative;
+  flex: 1;
+}
+
+.vet-approved__image {
+  width: 100%;
+  display: block;
+}
+
+.vet-approved__badge {
+  position: absolute;
+  width: 90px;
+}
+
+.badge--top-left {
+  top: 15px;
+  left: 15px;
+}
+
+.badge--top-right {
+  top: 15px;
+  right: 15px;
+}
+
+.badge--bottom-left {
+  bottom: 15px;
+  left: 15px;
+}
+
+.badge--bottom-right {
+  bottom: 15px;
+  right: 15px;
+}
+
+.vet-approved__content {
+  flex: 1;
+}
+
+.vet-approved__button {
+  display: inline-block;
+  padding: 14px 30px;
+  border-radius: 999px;
+  text-decoration: none;
+  background: #000;
+  color: #fff;
+}
+
+@media (max-width: 749px) {
+  .vet-approved__wrapper {
+    flex-direction: column;
+  }
+}

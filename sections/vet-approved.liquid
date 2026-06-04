@@ -1,0 +1,108 @@
+{{ 'vet-approved.css' | asset_url | stylesheet_tag }}
+
+<section class="vet-approved">
+  <div class="vet-approved__wrapper">
+    
+    <div class="vet-approved__image-wrapper">
+      {% if section.settings.image %}
+        <img
+          src="{{ section.settings.image | image_url: width: 800 }}"
+          alt=""
+          class="vet-approved__image"
+        >
+      {% endif %}
+
+      {% if section.settings.badge %}
+        <img
+          src="{{ section.settings.badge | image_url: width: 200 }}"
+          alt=""
+          class="vet-approved__badge badge--{{ section.settings.badge_position }}"
+        >
+      {% endif %}
+    </div>
+
+    <div class="vet-approved__content">
+      <p class="vet-approved__doctor">
+        {{ section.settings.doctor_name }}
+      </p>
+
+      <h2>
+        {{ section.settings.heading }}
+      </h2>
+
+      <div class="vet-approved__text">
+        {{ section.settings.body }}
+      </div>
+
+      {% if section.settings.button_label != blank %}
+        <a
+          href="{{ section.settings.button_url }}"
+          class="vet-approved__button"
+        >
+          {{ section.settings.button_label }}
+        </a>
+      {% endif %}
+    </div>
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Vet Approved",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Main Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "badge",
+      "label": "Badge Image"
+    },
+    {
+      "type": "select",
+      "id": "badge_position",
+      "label": "Badge Position",
+      "default": "top-left",
+      "options": [
+        { "value": "top-left", "label": "Top Left" },
+        { "value": "top-right", "label": "Top Right" },
+        { "value": "bottom-left", "label": "Bottom Left" },
+        { "value": "bottom-right", "label": "Bottom Right" }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "doctor_name",
+      "label": "Doctor Name"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "body",
+      "label": "Body Text"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Button URL"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Vet Approved"
+    }
+  ]
+}
+{% endschema %}
