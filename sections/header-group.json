@@ -134,16 +134,48 @@
     "announcement_slider_UNjpCQ": {
       "type": "announcement-slider",
       "blocks": {
-        "slide_hG3pqr": {
-          "type": "slide",
+        "item_nmLf6w": {
+          "type": "item",
           "settings": {
-            "icon": "shopify://shop_images/CuppingSet7.jpg",
+            "icon": "shopify://shop_images/DALL_E_2024-01-22_12.02.58_-_Design_a_badge_with_a_professional_and_trustworthy_look_intended_for_approval_by_veterinarians._The_badge_should_feature_a_paw_print_and_a_stethoscop-2.png",
             "text": "Free Shipping",
-            "link": "shopify://pages/data-sharing-opt-out"
+            "link": "shopify://collections/slippers"
           }
         },
-        "slide_TqfRgt": {
-          "type": "slide",
+        "item_YLxaEc": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/DALL_E_2024-01-22_12.02.58_-_Design_a_badge_with_a_professional_and_trustworthy_look_intended_for_approval_by_veterinarians._The_badge_should_feature_a_paw_print_and_a_stethoscop-2.png",
+            "text": "Free Shipping",
+            "link": "shopify://collections/slippers"
+          }
+        },
+        "item_Wn3Wwx": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/DALL_E_2024-01-22_12.02.58_-_Design_a_badge_with_a_professional_and_trustworthy_look_intended_for_approval_by_veterinarians._The_badge_should_feature_a_paw_print_and_a_stethoscop-2.png",
+            "text": "Free Shipping",
+            "link": "shopify://collections/slippers"
+          }
+        },
+        "item_G3rXWh": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/DALL_E_2024-01-22_12.02.58_-_Design_a_badge_with_a_professional_and_trustworthy_look_intended_for_approval_by_veterinarians._The_badge_should_feature_a_paw_print_and_a_stethoscop-2.png",
+            "text": "Free Shipping",
+            "link": "shopify://collections/slippers"
+          }
+        },
+        "item_PzejtK": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/DALL_E_2024-01-22_12.02.58_-_Design_a_badge_with_a_professional_and_trustworthy_look_intended_for_approval_by_veterinarians._The_badge_should_feature_a_paw_print_and_a_stethoscop-2.png",
+            "text": "Free Shipping",
+            "link": "shopify://collections/slippers"
+          }
+        },
+        "item_6AAAEP": {
+          "type": "item",
           "settings": {
             "icon": "shopify://shop_images/DALL_E_2024-01-22_12.02.58_-_Design_a_badge_with_a_professional_and_trustworthy_look_intended_for_approval_by_veterinarians._The_badge_should_feature_a_paw_print_and_a_stethoscop-2.png",
             "text": "Free Shipping",
@@ -152,8 +184,12 @@
         }
       },
       "block_order": [
-        "slide_hG3pqr",
-        "slide_TqfRgt"
+        "item_nmLf6w",
+        "item_YLxaEc",
+        "item_Wn3Wwx",
+        "item_G3rXWh",
+        "item_PzejtK",
+        "item_6AAAEP"
       ],
       "name": "Announcement Slider",
       "settings": {}
