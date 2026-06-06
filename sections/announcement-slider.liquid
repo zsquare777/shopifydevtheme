@@ -1,12 +1,15 @@
 <div class="announcement-slider">
-  <div class="slider-wrapper">
-
+  <div class="announcement-slider__wrapper">
     {% for block in section.blocks %}
-      <a href="{{ block.settings.link }}" class="slide-item">
+      <a
+        href="{{ block.settings.link }}"
+        class="announcement-slider__item"
+        {{ block.shopify_attributes }}
+      >
         {% if block.settings.icon != blank %}
           <img
-            src="{{ block.settings.icon | image_url: width: 50 }}"
-            alt=""
+            src="{{ block.settings.icon | image_url: width: 60 }}"
+            alt="{{ block.settings.text }}"
             width="24"
             height="24"
           >
@@ -15,45 +18,48 @@
         <span>{{ block.settings.text }}</span>
       </a>
     {% endfor %}
-
   </div>
 </div>
 
 <style>
 .announcement-slider{
   background:#000;
-  color:#fff;
-  overflow:hidden;
-  padding:12px 0;
+  padding:10px 0;
+  overflow-x:auto;
 }
 
-.slider-wrapper{
+.announcement-slider__wrapper{
   display:flex;
-  gap:60px;
-  animation: scroll 20s linear infinite;
-  white-space:nowrap;
+  justify-content:center;
+  align-items:center;
+  gap:40px;
+  min-width:max-content;
 }
 
-.slide-item{
+.announcement-slider__item{
   display:flex;
   align-items:center;
-  gap:10px;
-  color:#fff;
+  gap:8px;
   text-decoration:none;
+  color:#fff;
+  font-size:14px;
   font-weight:600;
 }
 
-.slide-item img{
+.announcement-slider__item img{
   width:20px;
   height:20px;
+  object-fit:contain;
 }
 
-@keyframes scroll{
-  from{
-    transform:translateX(100%);
+@media(max-width:768px){
+  .announcement-slider__wrapper{
+    gap:20px;
+    padding:0 10px;
   }
-  to{
-    transform:translateX(-100%);
+
+  .announcement-slider__item{
+    font-size:12px;
   }
 }
 </style>
@@ -61,10 +67,10 @@
 {% schema %}
 {
   "name": "Announcement Slider",
-  "max_blocks": 10,
+  "settings": [],
   "blocks": [
     {
-      "type": "item",
+      "type": "slide",
       "name": "Slide",
       "settings": [
         {
@@ -75,7 +81,8 @@
         {
           "type": "text",
           "id": "text",
-          "label": "Text"
+          "label": "Text",
+          "default": "Free Shipping"
         },
         {
           "type": "url",
@@ -92,5 +99,3 @@
   ]
 }
 {% endschema %}
-
-
