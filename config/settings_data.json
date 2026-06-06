@@ -149,6 +149,11 @@
         "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
         "disabled": false,
         "settings": {}
+      },
+      "1027443428159536739": {
+        "type": "shopify://apps/hextom-announce-bar/blocks/qab-embeded-block/9ac2a261-3b8b-42c8-9613-d34eb2e079d3",
+        "disabled": false,
+        "settings": {}
       }
     },
     "color_schemes": {
