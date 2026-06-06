@@ -130,11 +130,39 @@
         "padding_top": 20,
         "padding_bottom": 20
       }
+    },
+    "announcement_slider_UNjpCQ": {
+      "type": "announcement-slider",
+      "blocks": {
+        "slide_hG3pqr": {
+          "type": "slide",
+          "settings": {
+            "icon": "shopify://shop_images/CuppingSet7.jpg",
+            "text": "Free Shipping",
+            "link": "shopify://pages/data-sharing-opt-out"
+          }
+        },
+        "slide_TqfRgt": {
+          "type": "slide",
+          "settings": {
+            "icon": "shopify://shop_images/DALL_E_2024-01-22_12.02.58_-_Design_a_badge_with_a_professional_and_trustworthy_look_intended_for_approval_by_veterinarians._The_badge_should_feature_a_paw_print_and_a_stethoscop-2.png",
+            "text": "Free Shipping",
+            "link": "shopify://collections/slippers"
+          }
+        }
+      },
+      "block_order": [
+        "slide_hG3pqr",
+        "slide_TqfRgt"
+      ],
+      "name": "Announcement Slider",
+      "settings": {}
     }
   },
   "order": [
     "marquee_section_qMzM3k",
     "announcement-bar",
-    "header"
+    "header",
+    "announcement_slider_UNjpCQ"
   ]
 }
