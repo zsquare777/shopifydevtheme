@@ -1,0 +1,96 @@
+<div class="announcement-slider">
+  <div class="slider-wrapper">
+
+    {% for block in section.blocks %}
+      <a href="{{ block.settings.link }}" class="slide-item">
+        {% if block.settings.icon != blank %}
+          <img
+            src="{{ block.settings.icon | image_url: width: 50 }}"
+            alt=""
+            width="24"
+            height="24"
+          >
+        {% endif %}
+
+        <span>{{ block.settings.text }}</span>
+      </a>
+    {% endfor %}
+
+  </div>
+</div>
+
+<style>
+.announcement-slider{
+  background:#000;
+  color:#fff;
+  overflow:hidden;
+  padding:12px 0;
+}
+
+.slider-wrapper{
+  display:flex;
+  gap:60px;
+  animation: scroll 20s linear infinite;
+  white-space:nowrap;
+}
+
+.slide-item{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+}
+
+.slide-item img{
+  width:20px;
+  height:20px;
+}
+
+@keyframes scroll{
+  from{
+    transform:translateX(100%);
+  }
+  to{
+    transform:translateX(-100%);
+  }
+}
+</style>
+
+{% schema %}
+{
+  "name": "Announcement Slider",
+  "max_blocks": 10,
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Announcement Slider"
+    }
+  ]
+}
+{% endschema %}
+
+

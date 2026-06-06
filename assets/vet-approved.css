@@ -52,18 +52,16 @@
   color: #d89b2b;
   font-size: 14px;
   font-weight: 700;
-  margin: 10px 0;
+  margin-bottom: 12px;
 }
 
 .vet-approved__content h2 {
-  font-size: 28px;
-  font-weight: 700;
+  font-size: 32px;
   line-height: 1.2;
   margin: 0 0 20px;
 }
 
 .vet-approved__text {
-  font-size: 16px;
   color: #666;
   line-height: 1.8;
   margin-bottom: 25px;
@@ -78,12 +76,10 @@
   background: #000;
   color: #fff;
   text-decoration: none;
-  border-radius: 999px;
   text-align: center;
-  font-weight: 600;
+  border-radius: 999px;
 }
 
-/* Desktop layout */
 @media (min-width: 750px) {
   .vet-approved {
     max-width: 1200px;
