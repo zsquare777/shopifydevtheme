@@ -21,6 +21,54 @@
 </div>
 
 <style>
+.announcement-slider{
+  background:#000;
+  overflow:hidden;
+  padding:10px 0;
+}
+
+.announcement-track{
+  display:flex;
+  width:max-content;
+  align-items:center;
+  animation: scroll 20s linear infinite;
+}
+
+.announcement-item{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  color:#fff;
+  text-decoration:none;
+  white-space:nowrap;
+  padding:0 20px;
+  font-size:14px;
+  font-weight:600;
+}
+
+.announcement-item img{
+  width:20px;
+  height:20px;
+  object-fit:contain;
+}
+
+@keyframes scroll{
+  0%{
+    transform:translateX(0);
+  }
+  100%{
+    transform:translateX(-50%);
+  }
+}
+
+/* optional: mobile tweaks */
+@media(max-width:768px){
+  .announcement-item{
+    font-size:12px;
+    padding:0 12px;
+  }
+}
+
 .announcement-slider:hover .announcement-track{
   animation-play-state: paused;
 }
@@ -79,3 +127,4 @@
   ]
 }
 {% endschema %}
+
