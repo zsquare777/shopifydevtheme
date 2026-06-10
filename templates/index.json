@@ -708,50 +708,8 @@
       "type": "vet-approved",
       "name": "Vet Approved",
       "settings": {
-        "vet_card": "",
         "badge_position": "top-left"
       }
-    },
-    "collection_list_gm_6mYwx4": {
-      "type": "collection-list-gm",
-      "blocks": {
-        "collection_list_gtpmBq": {
-          "type": "collection-list",
-          "settings": {
-            "collection_image": "shopify://shop_images/ChatGPT_Image_Jun_7_2026_09_48_26_PM.png",
-            "collection_link": "shopify://collections/spices"
-          }
-        },
-        "collection_list_RRQCmp": {
-          "type": "collection-list",
-          "settings": {
-            "collection_image": "shopify://shop_images/ChatGPT_Image_Jun_7_2026_09_48_26_PM.png",
-            "collection_link": "shopify://collections/spices"
-          }
-        },
-        "collection_list_xxfJ8X": {
-          "type": "collection-list",
-          "settings": {
-            "collection_image": "shopify://shop_images/ChatGPT_Image_Jun_7_2026_09_48_26_PM.png",
-            "collection_link": "shopify://collections/spices"
-          }
-        },
-        "collection_list_P7AitY": {
-          "type": "collection-list",
-          "settings": {
-            "collection_image": "shopify://shop_images/ChatGPT_Image_Jun_7_2026_09_48_26_PM.png",
-            "collection_link": "shopify://collections/spices"
-          }
-        }
-      },
-      "block_order": [
-        "collection_list_gtpmBq",
-        "collection_list_RRQCmp",
-        "collection_list_xxfJ8X",
-        "collection_list_P7AitY"
-      ],
-      "name": "GM Collection List Learning",
-      "settings": {}
     }
   },
   "order": [
@@ -769,7 +727,6 @@
     "17797490054a96f6ef",
     "1779788437fd68ccde",
     "1779788476a5ce136e",
-    "vet_approved_PhxwUD",
-    "collection_list_gm_6mYwx4"
+    "vet_approved_PhxwUD"
   ]
 }

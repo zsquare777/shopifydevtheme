@@ -14,12 +14,13 @@
     display: block;
   }
 </style>
-
+ {{  section.settings.heading_show   }}
 <div class="collection-list-container-{{ section.id }}">
   {% for block in section.blocks %}
     <a class="collection-link" href="{{ block.settings.collection_link }}">
       <img class="collection-image" src="{{ block.settings.collection_image | image_url }}" alt="" width="{{ block.settings.collection_image.width }}" height="{{ block.settings.collection_image.height }}">
     </a>
+   
   {% endfor %}
 </div>
 
@@ -27,7 +28,13 @@
   {
     "name": "GM Collection List",
     "tag": "section",
-    "settings": [],
+    "settings": [
+      {
+        "type": "richtext",
+        "id": "heading_show",
+        "label": "Heading"
+      },
+    ],
     "blocks": [
       {
         "name": "collection",
