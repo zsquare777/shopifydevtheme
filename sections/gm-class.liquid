@@ -5,7 +5,8 @@
 
 <div class="page-width">
 
-<h1>This is our first section </h1>
+<h1>{{ section.settings.headting_text}} </h1>
+<p>{{ section.settings.paragraph_text }}</p>
 
     </div>
 
@@ -13,7 +14,16 @@
     {% schema %}
     {
       "name": "Class 1",
-      "settings": [],
+      "settings": [
+        {"type": "text",
+        "id": "headting_text",
+      "label": "Heading"},
+
+    {"type": "textarea",
+    "id": "paragraph_text",
+  "label": "Write prarag",
+ "default": "Thissdfsd" }
+      ],
       "blocks": [],
       "presets": [
         {
