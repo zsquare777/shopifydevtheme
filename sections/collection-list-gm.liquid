@@ -1,7 +1,24 @@
+
+
+
+
+<style>
+  .collection-list-container-{{ section.id }} {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+  .collection-list-container-{{ section.id }} img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+</style>
+
 <div class="collection-list-container-{{ section.id }}">
   {% for block in section.blocks %}
-    <a class="collection-link {{ section.id }}" href="{{ block.settings.collection_link }}">
-      <img class="collection-image {{ section.id }}" src="{{ block.settings.collection_image | image_url }}" alt="" width="{{ block.settings.collection_image.width }}" height="{{ block.settings.collection_image.height }}">
+    <a class="collection-link" href="{{ block.settings.collection_link }}">
+      <img class="collection-image" src="{{ block.settings.collection_image | image_url }}" alt="" width="{{ block.settings.collection_image.width }}" height="{{ block.settings.collection_image.height }}">
     </a>
   {% endfor %}
 </div>
