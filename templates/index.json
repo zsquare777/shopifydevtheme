@@ -708,7 +708,16 @@
       "type": "vet-approved",
       "name": "Vet Approved",
       "settings": {
+        "vet_card": "",
         "badge_position": "top-left"
+      }
+    },
+    "font_picker_class_cWUE8m": {
+      "type": "font-picker-class",
+      "name": "Font Picker",
+      "settings": {
+        "font_pick": "abril_fatface_n4",
+        "heading": "asdsadasasdasdasdasdasd"
       }
     }
   },
@@ -727,6 +736,7 @@
     "17797490054a96f6ef",
     "1779788437fd68ccde",
     "1779788476a5ce136e",
-    "vet_approved_PhxwUD"
+    "vet_approved_PhxwUD",
+    "font_picker_class_cWUE8m"
   ]
 }
