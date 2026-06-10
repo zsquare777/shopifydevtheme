@@ -1,0 +1,26 @@
+<div class="">
+
+    {{ section.settings.font_pick }}
+    </div>
+
+{% schema %}
+  {
+    "name": "Test1",
+    "tag": "section",
+  
+    "settings": [
+        {"type": "font_picker",
+        "id": "font_pick",
+          "label": "Font Picker",
+        "default": "helvetica_n4"}
+      
+    ],
+    "presets": [
+      {
+        "name": "Font Picker",
+        "settings": {
+        }
+      }
+    ]
+  }
+{% endschema %}}
