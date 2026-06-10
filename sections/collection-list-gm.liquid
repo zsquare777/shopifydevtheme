@@ -1,0 +1,38 @@
+<div class="collection-list-container-{{ section.id }}">
+  {% for block in section.blocks %}
+    <a class="collection-link {{ section.id }}" href="{{ block.settings.collection_link }}">
+      <img class="collection-image {{ section.id }}" src="{{ block.settings.collection_image | image_url }}" alt="" width="{{ block.settings.collection_image.width }}" height="{{ block.settings.collection_image.height }}">
+    </a>
+  {% endfor %}
+</div>
+
+{% schema %}
+  {
+    "name": "GM Collection List",
+    "tag": "section",
+    "settings": [],
+    "blocks": [
+      {
+        "name": "collection",
+        "type": "collection-list",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "collection_image",
+            "label": "Select Image"
+          },
+          {
+            "type": "url",
+            "id": "collection_link",
+            "label": "Select Collection"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "GM Collection List Learning"
+      }
+    ]
+  }
+{% endschema %}
